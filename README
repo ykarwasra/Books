@@ -1,0 +1,82 @@
+This API provides CRUD (Create, Read, Update, Delete) operations for managing books.
+
+### Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- Node.js: [Download and Install Node.js](https://nodejs.org/)
+- MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community)
+
+### Installation
+Clone the repository.
+Install dependencies: npm install
+Run the server: npm start
+Make sure to replace npm start with the actual command to start your server.
+
+
+## Endpoints
+
+### Get All Books
+
+- **Endpoint:** `GET /books`
+- **Description:** Get a list of all books.
+- **Response:**
+  - Status: 200 OK
+  - Content: JSON array of books.
+
+### Create a Book
+
+- **Endpoint:** `POST /book`
+- **Description:** Create a new book.
+- **Request Body:**
+  ```json
+  {
+    "title": "The Book Title",
+    "description": "A brief description of the book.",
+    "author":"Author name"
+  }
+ -**Response:
+    Status: 201 Created
+    Content: JSON object with the created book.
+
+### Update a Book
+
+- **Endpoint:** `PUT /update/:id`
+- **Description:** update a new book.
+- **Request Body:**
+      ```json
+      {
+        "title": "The Book Title",
+        "description": "A brief description of the book.",
+        "author":"Author name"
+      }
+- **Request Parameters-
+    id: The ID of the book to update.
+
+ -**Response:
+    Status: 204 
+    content:JSON object message "Successful update".
+
+### Delete a Book
+
+- **Endpoint:** `DELETE /remove/:id`
+- **Description:** delete a new book.
+- **Request Parameters-
+    id: The ID of the book to delete.
+
+ -**Response:
+    Status: 204 
+    content:JSON object with message "Successful deleted".
+
+### Get Book by ID
+
+- **Endpoint:** `GET /book/:id`
+- **Description:** get detail of book by ID.
+- **Request Parameters-
+    id: The ID of the book.
+
+ -**Response:
+    Status: 204 
+    content:JOSN object with book details.
+
+ 
