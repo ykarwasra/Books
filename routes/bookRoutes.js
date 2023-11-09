@@ -18,6 +18,7 @@ bookRoute.post("/book", async (req, res, next) =>{
     let book = new Books ({
       title: req.body.title,
       description: req.body.description,
+      author:req.body.author,
     })
     try {
       await book.save()
